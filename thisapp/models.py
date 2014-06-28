@@ -1,5 +1,9 @@
 from django.db import models
 
+class Games(models.Model):
+	game_name = models.CharField(primary_key=True, max_length=50)
+
+
 class Character(models.Model):
 	'''
 	Responsible for character database structure
