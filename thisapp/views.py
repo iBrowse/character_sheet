@@ -10,7 +10,7 @@ def home(request):
 
 def roll_dice(request):
 	if request.method == 'POST':
-		form = RollDiceForm(requst.POST)
+		form = RollDiceForm(request.POST)
 		if form.is_valid():
 			return HttpResponseRedirect(reverse("home"))
 	else:
