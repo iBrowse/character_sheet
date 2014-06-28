@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Character
 
+def home(request):
+	return render(request, "thisapp/home.html")
+
+
 def character_sheet(request):
 	character_sheet = Character.objects.all()
 	return render(request, "thisapp/charactersheet.html",{
